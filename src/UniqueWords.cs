@@ -19,7 +19,7 @@ namespace Palindrome
             }
 
             Console.WriteLine("Total Unique Words: " + wordsToCounts.Count);
-            foreach (var uniqueWord in wordsToCounts)
+            foreach (var uniqueWord in wordsToCounts.OrderBy(w => w.Key))
             {
                 Console.WriteLine(uniqueWord.Key + ": " + uniqueWord.Value);
             }
