@@ -2,7 +2,7 @@ namespace Palindrome
 {
     public class PalindromeFinder
     {
-        public static void CountPalindroneWords(string paragraph)
+        public static void CountPalindromeWords(string paragraph)
         {
             var words = paragraph.Split(' ');
             Console.WriteLine("Total number of words: " + words.Length);
@@ -10,16 +10,16 @@ namespace Palindrome
             var count = 0;
             foreach (var word in words)
             {
-                if (IsPalidrone(word))
+                if (IsPalidrome(word))
                 {
                     count++;
                 }
             }
 
-            Console.WriteLine("Number of palindrone words: " + count);
+            Console.WriteLine("Number of palindrome words: " + count);
         }
 
-        public static void CountPalindroneSentences(string paragraph)
+        public static void CountPalindromeSentences(string paragraph)
         {
             var sentences = paragraph.Split(new string[] { ". " }, StringSplitOptions.None);
             Console.WriteLine("Total number of sentences: " + sentences.Length);
@@ -27,16 +27,16 @@ namespace Palindrome
             var count = 0;
             foreach (var sentence in sentences)
             {
-                if (IsPalidrone(Helpers.SanitizeString(sentence)))
+                if (IsPalidrome(Helpers.SanitizeString(sentence)))
                 {
                     count++;
                 }
             }
 
-            Console.WriteLine("Number of palindrone sentences: " + count);
+            Console.WriteLine("Number of palindrome sentences: " + count);
         }
 
-        private static bool IsPalidrone(string input)
+        private static bool IsPalidrome(string input)
         {
             var charArray = input.ToCharArray();
             Array.Reverse(charArray);
