@@ -2,7 +2,7 @@ namespace HelloWorld
 {
     public class UniqueWords
     {
-        public static void PrintUniqueWordsAndCounts(string paragraph){
+        public static void FindAndPrintUniqueWordsAndCounts(string paragraph){
 
             Dictionary<string, int> wordsToCounts = new Dictionary<string, int>();
 
