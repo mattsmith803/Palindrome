@@ -12,7 +12,7 @@
 
             testParagraph = Helpers.SanitizeString(testParagraph);
             PalindromeFinder.CountPalindromeWords(testParagraph);
-            UniqueWords.FindAndPrintUniqueWordsAndCounts(testParagraph);
+            UniqueWords.ExecuteUniqueWords(testParagraph);
         }
     }
 }

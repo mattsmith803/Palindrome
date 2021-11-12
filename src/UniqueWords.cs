@@ -2,9 +2,18 @@ namespace Palindrome
 {
     public class UniqueWords
     {
-        public static void FindAndPrintUniqueWordsAndCounts(string paragraph)
+        public static void ExecuteUniqueWords(string paragraph)
         {
+            var wordsToCounts = FindUniqueWordsAndCounts(paragraph);
 
+            Console.WriteLine("Total Unique Words: " + wordsToCounts.Count);
+            foreach (var uniqueWord in wordsToCounts.OrderBy(w => w.Key))
+            {
+                Console.WriteLine(uniqueWord.Key + ": " + uniqueWord.Value);
+            }
+        }
+        public static Dictionary<string, int> FindUniqueWordsAndCounts(string paragraph)
+        {
             Dictionary<string, int> wordsToCounts = new Dictionary<string, int>();
 
             foreach (var word in paragraph.Split(' '))
@@ -18,12 +27,7 @@ namespace Palindrome
                 wordsToCounts[word] = wordsToCounts[word] + 1;
             }
 
-            Console.WriteLine("Total Unique Words: " + wordsToCounts.Count);
-            foreach (var uniqueWord in wordsToCounts.OrderBy(w => w.Key))
-            {
-                Console.WriteLine(uniqueWord.Key + ": " + uniqueWord.Value);
-            }
-
+            return wordsToCounts;
         }
     }
 }
