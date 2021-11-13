@@ -5,6 +5,7 @@ Palindrome is a console application that takes an input of a paragraph and print
 - Number of palindrome words in paragraph
 - Number of palindrome sentences in paragraph
 - List of unique words in the paragraph and their respective counts
+- Finds the words with a given letter
 
 ## Dependencies:
 - [.NET 6.0](https://dotnet.microsoft.com/download/dotnet/6.0)
