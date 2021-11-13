@@ -33,4 +33,5 @@ Palindrome is a console application that takes an input of a paragraph and print
 
 ## Running unit tests with dotnet cli
 - `cd Palindrome/Palindrome.Test`
+- `dotnet build`
 - `dotnet test`
