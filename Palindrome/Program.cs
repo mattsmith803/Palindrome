@@ -27,12 +27,12 @@ namespace Palindrome
                     return;
                 }
 
-                if (File.Exists(paragraph))
+                if (File.Exists(paragraph)) // check if input is file path
                 {
                     paragraph = File.ReadAllText(paragraph);
                 }
 
-                var analyze = true;
+                var analyze = true; // track if user is analzing the same paragraph
                 while (analyze)
                 {
                     Console.WriteLine("Select an action by entering the number of the action: ");

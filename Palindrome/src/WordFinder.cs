@@ -13,7 +13,7 @@ namespace Palindrome
             Console.WriteLine("Total Unique Words: " + wordsToCounts.Count);
             foreach (var uniqueWord in wordsToCounts.OrderBy(w => w.Key))
             {
-                Console.WriteLine($"{uniqueWord.Key,15}: {uniqueWord.Value,-2}");
+                Console.WriteLine($"{uniqueWord.Key,15}: {uniqueWord.Value,-2}"); // numbers are minimum number of length string, positive right aligns, negative left aligns
             }
         }
         public static Dictionary<string, int> FindUniqueWordsAndCounts(string paragraph)
