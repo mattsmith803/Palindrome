@@ -16,6 +16,13 @@ namespace Palindrome
         {
             Dictionary<string, int> wordsToCounts = new Dictionary<string, int>();
 
+            if (paragraph == "")
+            {
+                return wordsToCounts;
+            }
+
+            paragraph = Helpers.SanitizeString(paragraph);
+
             foreach (var word in paragraph.Split(' '))
             {
 
