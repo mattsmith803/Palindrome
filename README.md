@@ -19,11 +19,9 @@ to do
     - `git clone git@github.com:mattsmith803/Palindrome.git`
 
 ## Building and running program from Powerhshell
-- open powershell
 - `cd Palindrome/`
 - `./PalindromeScript.ps1`
 
 ## Runing unit tests
-- open console
 - `cd Palindrome/Palindrome.Test`
 - `dotnet test`
