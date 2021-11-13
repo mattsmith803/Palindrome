@@ -9,7 +9,7 @@ namespace Palindrome
             Console.WriteLine("Total Unique Words: " + wordsToCounts.Count);
             foreach (var uniqueWord in wordsToCounts.OrderBy(w => w.Key))
             {
-                Console.WriteLine(uniqueWord.Key + ": " + uniqueWord.Value);
+                Console.WriteLine($"{uniqueWord.Key,15}: {uniqueWord.Value,-2}");
             }
         }
         public static Dictionary<string, int> FindUniqueWordsAndCounts(string paragraph)
@@ -25,6 +25,10 @@ namespace Palindrome
 
             foreach (var word in paragraph.Split(' '))
             {
+                if (word == "")
+                {
+                    continue;
+                }
 
                 if (!wordsToCounts.ContainsKey(word))
                 {

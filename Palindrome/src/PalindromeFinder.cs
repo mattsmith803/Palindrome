@@ -58,6 +58,12 @@ namespace Palindrome
 
         private static bool IsPalidrome(string input)
         {
+            if (input == "")
+            {
+                return false;
+            }
+
+
             var charArray = input.ToCharArray();
             Array.Reverse(charArray);
             var reversed = new string(charArray).Replace(" ", "");

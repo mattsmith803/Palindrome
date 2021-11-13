@@ -5,6 +5,23 @@ namespace Palindrome.Test;
 [TestClass]
 public class CountPalindromeWordsTest
 {
+    [TestMethod]
+    public void HasPalindromes_Empty()
+    {
+        string testParagraph = "";
+        var count = PalindromeFinder.CountPalindromeWords(testParagraph);
+
+        Assert.AreEqual(0, count, "Unexpected number of palindromes");
+    }
+
+    [TestMethod]
+    public void HasPalindromes_Space()
+    {
+        string testParagraph = " ";
+        var count = PalindromeFinder.CountPalindromeWords(testParagraph);
+
+        Assert.AreEqual(0, count, "Unexpected number of palindromes");
+    }
 
     [TestMethod]
     public void HasPalindromes_3outof3()
