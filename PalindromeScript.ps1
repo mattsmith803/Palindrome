@@ -1,4 +1,4 @@
-cd ./Palindrome
+cd ./Palindrome/
 
 dotnet build
 
