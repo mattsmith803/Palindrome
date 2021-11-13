@@ -72,6 +72,8 @@ namespace Palindrome
                 return wordsWithLetter;
             }
 
+            paragraph = Helpers.SanitizeString(paragraph);
+
             foreach (var word in paragraph.Split(' '))
             {
                 if (word == "")
