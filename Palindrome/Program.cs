@@ -1,4 +1,7 @@
-﻿namespace Palindrome
+﻿using System;
+using System.IO;
+
+namespace Palindrome
 {
     class Program
     {
