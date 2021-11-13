@@ -6,56 +6,16 @@ namespace Palindrome.Test;
 public class CountPalindromeWordsTest
 {
     [TestMethod]
-    public void HasPalindromes_Empty()
+    [DataRow("", 0)]
+    [DataRow(" ", 0)]
+    [DataRow("Anna civic wow", 3)]
+    [DataRow("Anna george wow", 2)]
+    [DataRow("Anna george civic kayak level madam mom noon racecar radar redder refer dog repaper rotator rotor sagas solos stats tenet wow", 19)]
+    [DataRow("george dog cat", 0)]
+    public void HasPalindromes_Empty(string paragraph, int expectedCount)
     {
-        string testParagraph = "";
-        var count = PalindromeFinder.CountPalindromeWords(testParagraph);
+        var count = PalindromeFinder.CountPalindromeWords(paragraph);
 
-        Assert.AreEqual(0, count, "Unexpected number of palindromes");
-    }
-
-    [TestMethod]
-    public void HasPalindromes_Space()
-    {
-        string testParagraph = " ";
-        var count = PalindromeFinder.CountPalindromeWords(testParagraph);
-
-        Assert.AreEqual(0, count, "Unexpected number of palindromes");
-    }
-
-    [TestMethod]
-    public void HasPalindromes_3outof3()
-    {
-        string testParagraph = "Anna civic wow";
-        var count = PalindromeFinder.CountPalindromeWords(testParagraph);
-
-        Assert.AreEqual(3, count, "Unexpected number of palindromes");
-    }
-
-    [TestMethod]
-    public void HasPalindromes_2outof3()
-    {
-        string testParagraph = "Anna george civic";
-        var count = PalindromeFinder.CountPalindromeWords(testParagraph);
-
-        Assert.AreEqual(2, count, "Unexpected number of palindromes");
-    }
-
-    [TestMethod]
-    public void HasPalindromes_19outof21()
-    {
-        string testParagraph = "Anna george civic kayak level madam mom noon racecar radar redder refer dog repaper rotator rotor sagas solos stats tenet wow";
-        var count = PalindromeFinder.CountPalindromeWords(testParagraph);
-
-        Assert.AreEqual(19, count, "Unexpected number of palindromes");
-    }
-
-    [TestMethod]
-    public void HasPalindromes_None()
-    {
-        string testParagraph = "george dog cat";
-        var count = PalindromeFinder.CountPalindromeWords(testParagraph);
-
-        Assert.AreEqual(0, count, "Unexpected number of palindromes");
+        Assert.AreEqual(expectedCount, count, "Unexpected number of palindromes");
     }
 }
