@@ -1,7 +1,10 @@
 # Palindrone
 
 ## Description
-to do
+Palindrome is a console application that takes an input of a paragraph and prints the following to the console:
+- Number of palindrome words in paragraph
+- Number of palindrome sentences in paragraph
+- List of unique words in the paragraph and their respective counts
 
 ## Dependencies:
 - [.NET 6.0](https://dotnet.microsoft.com/download/dotnet/6.0)
