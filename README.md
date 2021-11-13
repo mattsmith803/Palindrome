@@ -21,10 +21,10 @@ Palindrome is a console application that takes an input of a paragraph and print
     - `git clone https://github.com/mattsmith803/Palindrome.git`
     - `git clone git@github.com:mattsmith803/Palindrome.git`
 
-## Building and running program from Powerhshell
+## Building and running program from Powershell
 - `cd Palindrome/`
 - `./PalindromeScript.ps1`
 
-## Runing unit tests
+## Running unit tests
 - `cd Palindrome/Palindrome.Test`
 - `dotnet test`
